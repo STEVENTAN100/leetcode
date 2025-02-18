@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - src/**
+      - .github/workflows/deploy.yml
 
 jobs:
   deploy:
@@ -24,7 +25,7 @@ jobs:
           tag3='v1.19.0'
           url1="https://github.com/rust-lang/mdbook/releases/download/${tag1}/mdbook-${tag1}-x86_64-unknown-linux-gnu.tar.gz"
           url2="https://github.com/lzanini/mdbook-katex/releases/download/${tag2}-binaries/mdbook-katex-v${tag2}-x86_64-unknown-linux-gnu.tar.gz"
-          url3="https://github.com/tommilligan/mdbook-admonish/releases/download/${tag3}/mdbook-admonish-v${tag3}-x86_64-unknown-linux-gnu.tar.gz"
+          url3="https://github.com/tommilligan/mdbook-admonish/releases/download/${tag3}/mdbook-admonish-${tag3}-x86_64-unknown-linux-gnu.tar.gz"
           mkdir mdbook
           curl -sSL $url1 | tar -xz --directory=./mdbook
           curl -sSL $url2 | tar -xz --directory=./mdbook
