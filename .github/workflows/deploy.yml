@@ -17,14 +17,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Install mdbook mdbook-katex
+      - name: Install mdbook mdbook-katex mdbook-admonish
         run: |
-          tag1='v0.4.43'
+          tag1='v0.4.45'
+          tag2='0.9.2'
+          tag3='v1.19.0'
           url1="https://github.com/rust-lang/mdbook/releases/download/${tag1}/mdbook-${tag1}-x86_64-unknown-linux-gnu.tar.gz"
-          url2="https://github.com/lzanini/mdbook-katex/releases/download/0.9.2-binaries/mdbook-katex-v0.9.2-x86_64-unknown-linux-gnu.tar.gz"
+          url2="https://github.com/lzanini/mdbook-katex/releases/download/${tag2}-binaries/mdbook-katex-v${tag2}-x86_64-unknown-linux-gnu.tar.gz"
+          url3="https://github.com/tommilligan/mdbook-admonish/releases/download/${tag3}/mdbook-admonish-v${tag3}-x86_64-unknown-linux-gnu.tar.gz"
           mkdir mdbook
           curl -sSL $url1 | tar -xz --directory=./mdbook
           curl -sSL $url2 | tar -xz --directory=./mdbook
+          curl -sSL $url3 | tar -xz --directory=./mdbook
           echo `pwd`/mdbook >> $GITHUB_PATH
       - name: Build Book
         run: |
