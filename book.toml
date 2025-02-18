@@ -9,6 +9,7 @@ title = "Leetcode"
 additional-css = ["./mdbook-admonish.css"]
 git-repository-url = "https://github.com/STEVENTAN100/leetcode"
 edit-url-template = "https://github.com/STEVENTAN100/leetcode/edit/main/{path}"
+site-url = "/leetcode/"
 
 [preprocessor.admonish]
 command = "mdbook-admonish"
