@@ -1,0 +1,9 @@
+[book]
+authors = ["STEVENTAN100"]
+language = "zh-CN"
+multilingual = false
+src = "src"
+title = "Leetcode"
+
+[preprocessor.katex]
+after = ["links"]
