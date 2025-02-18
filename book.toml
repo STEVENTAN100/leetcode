@@ -5,5 +5,9 @@ multilingual = false
 src = "src"
 title = "Leetcode"
 
+[output.html]
+git-repository-url = "https://github.com/STEVENTAN100/leetcode"
+edit-url-template = "https://github.com/STEVENTAN100/leetcode/edit/main/{path}"
+
 [preprocessor.katex]
 after = ["links"]
